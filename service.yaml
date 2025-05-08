@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service # Name of this service object
+spec:
+  selector:
+    app: nginx # Selects pods with the 'app: nginx' label
+  ports:
+    - protocol: TCP
+      port: 80 # Port the service will be available on within the cluster
+      targetPort: 80 # Port on the pods the service sends traffic to
+  type: ClusterIP # Makes the service only reachable inside the Kubernetes cluster
