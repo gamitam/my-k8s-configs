@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nginx-deployment # Name of this deployment object
 spec:
-  replicas: 1 # Start with 1 copy of our application pod
+  replicas: 2 # Start with 1 copy of our application pod
   selector:
     matchLabels:
       app: nginx # Which pods this deployment manages
